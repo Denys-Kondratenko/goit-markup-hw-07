@@ -1,0 +1,21 @@
+.work {
+    padding-bottom: 94px;
+}
+
+.work-title {
+    margin-bottom: 50px;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.17;
+    text-align: center;
+    color: var(--secondary-color);
+}
+
+.work-list {
+    display: flex;
+    gap: 30px;
+}
+
+.work-item {
+    flex-basis: calc((100% - 60px) / 3);
+}
