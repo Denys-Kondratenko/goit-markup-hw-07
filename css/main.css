@@ -312,44 +312,68 @@ body {
   background-color: var(--hover-background-color);
 }
 
+.social {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.social__item {
+  width: 44px;
+  height: 44px;
+}
+
+.social__link {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.social__icon {
+  fill: currentColor;
+}
+
 .header {
   border-bottom: 1px solid var(--header-border);
 }
 
-.header-container {
+.header__container {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
-.navigation {
+.header__navigation {
   display: flex;
   align-items: center;
   gap: 93px;
 }
 
-.header-logo {
+.navigation__logo {
   padding-top: 24px;
   padding-bottom: 25px;
 }
-.header-logo:hover, .header-logo:focus {
+.navigation__logo:hover, .navigation__logo:focus {
   color: var(--black-color);
 }
 
-.header-logo-sacondary {
+.navigation__logo--color-black {
   color: var(--black-color);
   transition: color var(--animation);
 }
-.header-logo:hover .header-logo-sacondary, .header-logo:focus .header-logo-sacondary {
+.navigation__logo:hover .navigation__logo--color-black, .navigation__logo:focus .navigation__logo--color-black {
   color: var(--accent-color);
 }
 
-.navigation-list {
+.navigation__menu {
   display: flex;
   gap: 50px;
 }
 
-.navigation-link {
+.menu__link {
   position: relative;
   padding-top: 32px;
   padding-bottom: 32px;
@@ -359,7 +383,7 @@ body {
   color: var(--secondary-color);
   transition: color var(--animation);
 }
-.navigation-link::after {
+.menu__link::after {
   content: "";
   position: absolute;
   bottom: -1px;
@@ -371,25 +395,25 @@ body {
   transform: scaleX(0);
   transition: transform var(--animation);
 }
-.navigation-link:hover::after, .navigation-link:focus::after {
+.menu__link:hover::after, .menu__link:focus::after {
   transform: scaleX(1);
 }
-.navigation-link.current {
+.menu__link.current {
   color: var(--accent-color);
 }
-.navigation-link.current::after {
+.menu__link.current::after {
   transform: scaleX(1);
 }
-.navigation-link:hover, .navigation-link:focus {
+.menu__link:hover, .menu__link:focus {
   color: var(--accent-color);
 }
 
-.contacts-list {
+.header__contacts {
   display: flex;
   gap: 30px;
 }
 
-.contacts-link {
+.contacts__link {
   position: relative;
   display: flex;
   align-items: center;
@@ -402,7 +426,7 @@ body {
   color: inherit;
   transition: color var(--animation);
 }
-.contacts-link::after {
+.contacts__link::after {
   content: "";
   position: absolute;
   bottom: -1px;
@@ -414,15 +438,14 @@ body {
   transform: scaleX(0);
   transition: transform var(--animation);
 }
-.contacts-link:hover::after, .contacts-link:focus::after {
+.contacts__link:hover::after, .contacts__link:focus::after {
   transform: scaleX(1);
 }
-.contacts-link:hover, .contacts-link:focus {
+.contacts__link:hover, .contacts__link:focus {
   color: var(--accent-color);
 }
 
-.icon-envelope,
-.icon-smartphone {
+.contacts__icon {
   fill: currentColor;
 }
 
@@ -434,12 +457,15 @@ body {
   background-color: var(--hero-background-color);
   max-width: 1600px;
   min-height: 600px;
-  margin: 0 auto;
   padding: 200px 0;
   text-align: center;
 }
 
-.hero-title {
+.hero__wrap {
+  margin: 0 auto;
+}
+
+.hero__title {
   max-width: 696px;
   margin-right: auto;
   margin-left: auto;
@@ -452,7 +478,7 @@ body {
   color: var(--wite-color);
 }
 
-.hero-btn {
+.hero__btn {
   padding: 10px 32px;
   font-weight: 700;
   font-size: 16px;
@@ -464,7 +490,7 @@ body {
   border-radius: 4px;
   transition: background-color var(--animation);
 }
-.hero-btn:hover, .hero-btn:focus {
+.hero__btn:hover, .hero__btn:focus {
   background-color: var(--hover-background-color);
 }
 
@@ -472,16 +498,16 @@ body {
   padding: 94px 0;
 }
 
-.advantages-list {
+.advantages__list {
   display: flex;
   gap: 30px;
 }
 
-.advantages-item {
+.advantages__item {
   flex-basis: calc((100% - 90px) / 4);
 }
 
-.advantages-wrap {
+.advantages__wrap {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -492,7 +518,7 @@ body {
   border-radius: 4px;
 }
 
-.advantages-subtitle {
+.advantages__subtitle {
   margin-bottom: 10px;
   font-weight: 700;
   font-size: 14px;
@@ -501,11 +527,11 @@ body {
   color: var(--secondary-color);
 }
 
-.work {
+.pictures {
   padding-bottom: 94px;
 }
 
-.work-title {
+.pictures__title {
   margin-bottom: 50px;
   font-weight: 700;
   font-size: 36px;
@@ -514,13 +540,28 @@ body {
   color: var(--secondary-color);
 }
 
-.work-list {
+.pictures__list {
   display: flex;
   gap: 30px;
 }
 
-.work-item {
+.pictures__item {
+  position: relative;
   flex-basis: calc((100% - 60px) / 3);
+}
+
+.pictures__text {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding-top: 27px;
+  padding-bottom: 27px;
+  font-weight: 700;
+  line-height: 1.14;
+  text-align: center;
+  text-transform: uppercase;
+  background: rgba(47, 48, 58, 0.8);
+  color: #ffffff;
 }
 
 .team {
@@ -528,7 +569,7 @@ body {
   background-color: var(--team-background-color);
 }
 
-.team-title {
+.team__title {
   margin-bottom: 50px;
   font-weight: 700;
   font-size: 36px;
@@ -537,12 +578,12 @@ body {
   color: var(--secondary-color);
 }
 
-.team-list {
+.team__list {
   display: flex;
   gap: 30px;
 }
 
-.team-item {
+.team__item {
   flex-basis: calc((100% - 90px) / 4);
   padding-bottom: 30px;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -550,11 +591,11 @@ body {
   background-color: var(--background-color-wite);
 }
 
-.team-img {
+.team__img {
   margin-bottom: 30px;
 }
 
-.team-subtitle {
+.team__subtitle {
   margin-bottom: 10px;
   font-weight: 500;
   font-size: 16px;
@@ -563,44 +604,21 @@ body {
   color: var(--secondary-color);
 }
 
-.team-text {
+.team__text {
   margin-bottom: 16px;
   font-size: 16px;
   line-height: 1.19;
   text-align: center;
 }
 
-.team-soc-list {
-  display: flex;
-  justify-content: center;
-  gap: 10px;
-}
-
-.team-soc-item {
-  width: 44px;
-  height: 44px;
-}
-
-.team-soc-link {
-  width: 100%;
-  height: 100%;
+.tean__color-link {
   background-color: var(--background-color-wite);
   color: var(--icon-color);
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   transition: background-color var(--animation), color var(--animation);
 }
-.team-soc-link:hover, .team-soc-link:focus {
+.tean__color-link:hover, .tean__color-link:focus {
   background-color: var(--accent-background-color);
   color: var(--background-color-wite);
-}
-
-.team-soc-icon {
-  width: 20px;
-  height: 20px;
-  fill: currentColor;
 }
 
 .clients {
