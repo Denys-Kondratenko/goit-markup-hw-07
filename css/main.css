@@ -625,7 +625,7 @@ body {
   padding: 94px 0;
 }
 
-.clients-title {
+.clients__title {
   font-size: 36px;
   line-height: 1.17;
   text-align: center;
@@ -634,17 +634,17 @@ body {
   margin-bottom: 50px;
 }
 
-.clients-list {
+.clients__list {
   display: flex;
   gap: 30px;
 }
 
-.clients-item {
+.company__item {
   width: calc((100% - 150px) / 6);
   height: 92px;
 }
 
-.clients-link {
+.company__link {
   width: 100%;
   height: 100%;
   color: var(--icon-color);
@@ -655,12 +655,12 @@ body {
   justify-content: center;
   transition: color var(--animation), border-color var(--animation);
 }
-.clients-link:hover, .clients-link:focus {
+.company__link:hover, .company__link:focus {
   color: var(--accent-color);
   border-color: var(--accent-color);
 }
 
-.clients-icon {
+.company__icon {
   fill: currentColor;
 }
 
@@ -669,7 +669,7 @@ body {
   background-color: var(--sacondary-background-color);
 }
 
-.footer-wrap {
+.footer__wrap {
   display: flex;
 }
 
@@ -677,47 +677,47 @@ body {
   margin-right: 70px;
 }
 
-.footer-logo {
+.footer__logo {
   display: inline-block;
   margin-bottom: 20px;
 }
-.footer-logo:hover, .footer-logo:focus {
+.footer__logo:hover, .footer__logo:focus {
   color: var(--wite-color);
 }
 
-.footer-logo-sacondary {
+.footer__logo--color-white {
   color: var(--wite-color);
   transition: color var(--animation);
 }
-.footer-logo:hover .footer-logo-sacondary, .footer-logo:focus .footer-logo-sacondary {
+.footer__logo:hover .footer__logo--color-white, .footer__logo:focus .footer__logo--color-white {
   color: var(--accent-color);
 }
 
-.footer-address {
+.address {
   min-width: 231px;
 }
 
-.address-primary {
+.address__link {
   color: var(--wite-color);
   transition: color var(--animation);
 }
-.address-primary:hover, .address-primary:focus {
+.address__link:hover, .address__link:focus {
   color: var(--accent-color);
 }
 
-.address-secondary {
+.address__link--secondary-color {
   color: var(--sacondary-wite-color);
   transition: color var(--animation);
 }
-.address-secondary:hover, .address-secondary:focus {
+.address__link--secondary-color:hover, .address__link--secondary-color:focus {
   color: var(--accent-color);
 }
 
-.address-item:not(:last-child) {
+.address__item:not(:last-child) {
   margin-bottom: 9px;
 }
 
-.join-text {
+.join__title {
   font-weight: 700;
   line-height: 1.14;
   text-transform: uppercase;
@@ -726,7 +726,7 @@ body {
   margin-bottom: 20px;
 }
 
-.join-list {
+.join__list {
   display: flex;
   justify-content: center;
   gap: 10px;
@@ -737,30 +737,24 @@ body {
   height: 44px;
 }
 
-.join-link {
-  width: 100%;
-  height: 100%;
+.social__link--secondary-color {
   background-color: var(--soc-background-color);
   color: var(--wite-color);
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   transition: background-color var(--animation);
 }
-.join-link:hover, .join-link:focus {
+.social__link--secondary-color:hover, .social__link--secondary-color:focus {
   background-color: var(--accent-background-color);
 }
 
-.join-icon {
+.join__icon {
   fill: currentColor;
 }
 
-.subscribe-form {
+.footer__subscribe {
   margin-left: 93px;
 }
 
-.subscribe-text {
+.subscribe__title {
   display: block;
   padding-top: 12px;
   padding-bottom: 20px;
@@ -770,12 +764,12 @@ body {
   color: var(--wite-color);
 }
 
-.subscribe-form-wrap {
+.subscribe__wrap {
   display: flex;
   gap: 12px;
 }
 
-.subscribe-input {
+.subscribe__input {
   padding: 0 16px;
   width: 358px;
   height: 50px;
@@ -787,23 +781,23 @@ body {
   border-radius: 4px;
   background-color: inherit;
 }
-.subscribe-input::-moz-placeholder {
+.subscribe__input::-moz-placeholder {
   font-size: 16px;
   letter-spacing: 0.03em;
   color: rgba(255, 255, 255, 0.6);
 }
-.subscribe-input:-ms-input-placeholder {
+.subscribe__input:-ms-input-placeholder {
   font-size: 16px;
   letter-spacing: 0.03em;
   color: rgba(255, 255, 255, 0.6);
 }
-.subscribe-input::placeholder {
+.subscribe__input::placeholder {
   font-size: 16px;
   letter-spacing: 0.03em;
   color: rgba(255, 255, 255, 0.6);
 }
 
-.subscribe-btn {
+.subscribe__btn {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -821,7 +815,7 @@ body {
   border: none;
   transition: background-color var(--animation);
 }
-.subscribe-btn:hover, .subscribe-btn:focus {
+.subscribe__btn:hover, .subscribe__btn:focus {
   background-color: var(--hover-background-color);
 }
 
